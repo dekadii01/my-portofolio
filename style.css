@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+html{
+    background-color: #0C0C0C;
+    scroll-behavior: smooth ;
+}
+
+body{
+    background-image: url(img/background.png);
+    background-size: cover;
+    height: 3813px;
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family: 'Mulish', sans-serif;
+}
+
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Navbar section */
+
+.nav{
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-color: #0C0C0C;
+    z-index: 999;
+}
+
+.nav div.logo{
+    width: 200px;
+    height: 10px;
+    position: absolute;
+}
+
+.nav div.logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8em;
+}
+
+.nav div.logo a:hover {
+    color: #c0c0c0;
+}
+
+.nav div.main_list{
+    width: 500px;
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul{
+    width:100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+}
+
+.nav div.main_list ul li{
+    width: 120px;
+    height: 65px;
+}
+
+.nav div.main_list ul li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+}
+
+.nav div.main_list ul li a:hover{
+    color: #c0c0c0;
+}
+
+.nav div.media_button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    display: none;
+}
+
+.nav div.media_button button.main_media_button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span{
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1){
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2){
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3){
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 20deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -20deg);
+}
+
+/* main content */
+
+section.main-content{
+    margin: 0 5%;
+}
+
+.introduce-myself{
+    padding-top: 168px;
+    height: 100vh;
+    color: #fff;
+}
+
+P.ui-ux{
+    color: #FFC637;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-class h1{
+    font-size: 64px;
+    width: 507px;
+    margin-bottom: 20px;
+}
+
+p.perkenalan{
+    font-weight: 400;
+    color: #999;
+    font-size: 22px;
+    width: 486px;
+    margin-bottom: 25px;
+}
+
+button.btn-primary{
+    width: 115px;
+    height: 43px;
+    background-color: #FFC637;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button.btn-primary a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button.btn-secondary{
+    width: 115px;
+    cursor: pointer;
+    height: 43px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+}
+
+button.btn-secondary a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* projects */
+
+.projects{
+    color: #000;
+    margin: 200px 12% 0 12%;
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 50px;
+}
+
+.projects h2{
+    margin: 0 auto;
+    width: 184px;
+    height: 72px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 48px;
+    border-bottom: 3px solid #FFC637;
+}
+
+.project{
+    filter: drop-shadow(0px 6px 64px rgba(112, 144, 176, 0.1));
+    border-radius: 24px;
+    background-color: #fff;
+    display: grid;
+    grid-template-areas: 
+    'judul gambar';
+}
+
+.gambar-project img{
+    width: 496px;
+    height: 526px;
+    border-radius: 24px;
+}
+
+.judul-project{
+    grid-area: judul;
+    padding-top: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.judul-project h1{
+    font-size: 40px;
+    color: #25282B;
+    margin-bottom: 20px;
+}
+
+.judul-project p{
+    font-size: 18px;
+    color: #828282;
+    margin-bottom: 10px;
+}
+
+button.view-project{
+    width: 150px;
+    cursor: pointer;
+    height: 43px;
+    background-color: transparent;
+    border: 2px solid #25282B;
+    border-radius: 25px;
+    color: #25282B;
+    font-size: 18px;
+}
+
+button.view-project a{
+    text-decoration: none;
+    color: #25282B;
+}
+
+.gambar-project{
+    grid-area: gambar;
+}
+
+.gambar-project img{
+    width: 496px;
+    height: 526px;
+    border-radius: 24px;
+}
+
+.judul-project{
+    grid-area: judul;
+    padding-top: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.judul-project h1{
+    font-size: 40px;
+    color: #25282B;
+    margin-bottom: 20px;
+}
+
+.judul-project p{
+    font-size: 18px;
+    color: #828282;
+    margin-bottom: 10px;
+}
+
+button.view-project{
+    width: 150px;
+    cursor: pointer;
+    height: 43px;
+    background-color: transparent;
+    border: 2px solid #25282B;
+    border-radius: 25px;
+    color: #25282B;
+    font-size: 18px;
+}
+
+.gambar-project{
+    grid-area: gambar;
+}
+
+/* messages */
+
+section.messages{
+    margin: 150px 5% 0 5%;
+    color: #fff;
+}
+
+section.messages h2{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 90px;
+}
+
+.form-message{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-nama{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form-nama input{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #E8ECF4;
+    background-color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.form-email{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form-email input{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #E8ECF4;
+    background-color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.form-pesan{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-pesan textarea{
+    width: 400px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.form-submit{
+    font-size: 18px;
+}
+
+.form-submit input{
+    width: 90px;
+    height: 45px;
+    background-color: #FFC637;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;    
+}
+
+.icon-message{
+    margin: 60px auto 0 auto;
+}
+
+.icon-message>*{
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.icon-message a img.logo-instagram{
+    width: 48px;
+    height: 48px;
+    margin: 0 10px;
+}
+
+/* footer */
+
+img.footer-desktop{
+    width: 1349px;
+    height: 329px;
+}
+
+img.footer-mobile{
+    display: none;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .container{
+        margin: 0;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    body{
+        height: 100%;
+    }
+
+    .container{
+        margin: 0;
+    }
+    
+    .nav div.logo{
+        margin-left: 15px;
+    }
+    
+    .nav div.main_list{
+        width: 100%;
+        margin-top: 65px;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    .nav div.show_list{
+        height: 111vh;
+        background-color: #0C0C0C;
+    }
+    
+    .nav div.main_list ul{
+        flex-direction: column;
+        width: 100%;
+        height: 111vh;
+        justify-content: space-evenly;
+        font-size: 18px;
+        align-items: center;
+        top: 80px;
+        right: 0;
+        left: 0;
+    }
+    
+    .nav div.main_list ul li{
+        width: 100%;
+        height: 40px;
+    }
+    
+    .nav div.main_list ul li a{
+      text-align: center;
+        line-height: 40px;
+        width: 100%;
+        height: 40px;
+        display: table;
+    }
+    
+    .nav div.media_button{
+        display: block;
+    }
+
+    /* container */
+
+    body{
+        background-image: none;
+    }
+
+    .introduce-myself{
+    padding-top: 210px;
+    height: 100vh;
+    color: #fff;
+}
+
+P.ui-ux{
+    color: #FFC637;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-class h1{
+    font-size: 34px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+p.perkenalan{
+    font-weight: 400;
+    color: #999;
+    font-size: 18px;
+    width: 350px;
+    margin-bottom: 25px;
+}
+
+button.btn-primary{
+    width: 100px;
+    height: 36px;
+    background-color: #FFC637;
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin-right: 10px;
+}
+
+button.btn-primary a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button.btn-secondary{
+    width: 100px;
+    cursor: pointer;
+    height: 36px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+}
+
+button.btn-secondary a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+    /* project */
+    .projects{
+    color: #000;
+    margin: 100px 0 0 0;
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 20px;
+}
+
+    section.projects h2{
+        font-size: 34px;
+        width: 130px;
+        height: 55px;
+    }
+
+    .project{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+
+    .judul-project{
+        grid-area: judul;
+        padding-top: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .gambar-project img{
+        width: 150px;
+        height: 170px;
+        border-radius: 24px;
+    }
+
+    .judul-project h1{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    p.keterangan-project{
+        font-size: 11px;
+    }
+
+    button.view-project{
+        width: 80px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    /* form */
+
+    section.messages h2{
+        font-size: 34px;
+        margin-left: 20px;
+    }
+
+    .form-message{
+        margin-left: 0px;
+    }
+
+    .form-nama input{
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #E8ECF4;
+    background-color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.form-email{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form-email input{
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #E8ECF4;
+    background-color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.form-pesan{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-pesan textarea{
+    width: 300px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.form-submit{
+    font-size: 18px;
+}
+
+.form-submit input{
+    width: 90px;
+    height: 45px;
+    background-color: #FFC637;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;    
+}
+
+.icon-message{
+    margin: 60px auto 0 auto;
+}
+
+.icon-message>*{
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.icon-message a img.logo-instagram{
+    margin: 0 10px;
+    width: 38px;
+    height: 38px;
+}
+    /* footer */
+
+    img.footer-desktop{
+        display: none;
+    }
+
+    img.footer-mobile{
+        display: inline;
+        width: 100%;
+    }
+}
