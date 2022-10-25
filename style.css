@@ -698,6 +698,7 @@ img.logo-instagram{
     }
 
     img.footer-mobile{
+        display: inline;
         width: 100%;
     }
 }
