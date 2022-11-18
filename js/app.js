@@ -5,7 +5,7 @@ btnView.addEventListener("click", () => {
 
 const btnCv = document.querySelector("#btn-cv");
 btnCv.addEventListener("click", () => {
-    window.open("source/cv.pdf");
+    window.open("source/CV.pdf");
 })
 
 const linked = document.querySelector("#linked");
